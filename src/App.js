@@ -1,6 +1,11 @@
+import MovieInputForm from "./components/MovieInputForm";
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="App">
+      <h1>Movie List</h1>
+      <MovieInputForm />
+    </div>
   );
 }
 
