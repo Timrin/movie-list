@@ -29,6 +29,10 @@ export default class App extends React.Component {
   }
 
   removeMovie(id) {
+    console.log(id);
+    console.log(this.state.movies);
+    this.setState({movies:this.state.movies.filter(movie => movie.id != id)});
+    console.log(this.state.movies);
   }
 
   render() {
@@ -37,7 +41,9 @@ export default class App extends React.Component {
       <div className="App">
         <h1>Movie List</h1>
         <MovieInputForm onAddMovie={this.addMovie}/>
-        <MovieList movies={movies}/>
+        <MovieList 
+          movies={movies}
+          onRemoveMovie={this.removeMovie}/>
       </div>
     );
   }
