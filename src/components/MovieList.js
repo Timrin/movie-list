@@ -1,5 +1,3 @@
-import './MovieList.css'
-
 function MovieList(props) {
     const movies = props.movies;
     const removeMovie = props.onRemoveMovie;
